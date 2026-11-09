@@ -1,0 +1,15 @@
+\begin{table}[h]
+\centering
+\caption{Component Ablation of Proposed Numerical Stabilizer ($r_{\max}=8$).}
+\label{tab:component_ablation}
+\begin{tabular}{lccccc}
+\toprule
+Method Configuration & Update (ms) $\downarrow$ & Repairs & Drift $\|(U U')^T (U U') - I\|_F$ & Drift $\|(V V')^T (V V') - I\|_F$ & Bounded? \\
+\midrule
+Brand (2006) Baseline (No Trigger)   & 1.77 & 0 & 3.20e-04 & 2.83e-05 & \textbf{No} (Drifting) \\
+Ours Strict Trigger (k=50)           & 1.59 & 14 & 4.83e-06 & 1.29e-05 & \textbf{Yes} \\
+Ours Optimal Trigger (k=100)         & 2.57 & 6 & 2.93e-05 & 1.35e-05 & \textbf{Yes} \\
+Ours with NumPy BLAS Solver          & 0.78 & 0 & 5.17e-06 & 7.88e-06 & \textbf{Yes} \\
+\bottomrule
+\end{tabular}
+\end{table}

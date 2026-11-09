@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{Ablation of Subspace Rank Capacity $r_{\max}$ on Surveillance Stream.}
+\label{tab:rank_sweep}
+\begin{tabular}{cccccc}
+\toprule
+Rank $r_{\max}$ & Update Time (ms) $\downarrow$ & Arithmetic (MFlops) $\downarrow$ & Clutter Floor $\downarrow$ & SCR $\uparrow$ & Operating Regime \\
+\midrule
+ 1 & 0.86 & 0.21 & 0.0186 & 3.6$\times$ & Under-parameterized (False alarms) \\
+ 2 & 0.47 & 0.42 & 0.0169 & 3.9$\times$ & Under-parameterized (False alarms) \\
+ 4 & 0.95 & 0.83 & 0.0155 & 4.2$\times$ & \textbf{Optimal Operating Point} \\
+ 8 & 1.86 & 1.66 & 0.0139 & 4.7$\times$ & \textbf{Optimal Operating Point} \\
+16 & 7.29 & 3.33 & 0.0106 & 6.1$\times$ & Subspace Leakage (Overfitting) \\
+32 & 23.95 & 6.69 & 0.0042 & 15.3$\times$ & Subspace Leakage (Overfitting) \\
+\bottomrule
+\end{tabular}
+\end{table}
